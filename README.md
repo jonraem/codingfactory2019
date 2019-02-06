@@ -1,5 +1,4 @@
 # Coding Factory 2019: Mars Rover Testing Challenge
----
 This is a testing challenge for candidates in Coding Factory 2019. The repository contains two files for source code and two files for tests. The aim is to write the code implementation into the source files so that the tests can pass.
 
 ### Setup
