@@ -25,10 +25,10 @@ describe('Gate One', () => {
   
   describe('isBiggerThan', () => {
     it('should return 1 if B is bigger than A', () => {
-      expect(isBiggerThan(1,2)).toEqual(1);
+      expect(isBiggerThan(2,1)).toEqual(1);
     });
     it('should return 0 if A is bigger than B', () => {
-      expect(isBiggerThan(2,1)).toEqual(0);
+      expect(isBiggerThan(1,2)).toEqual(0);
     });
     it('should return -1 if A and B are equal', () => {
       expect(isBiggerThan(1,1)).toEqual(-1);
