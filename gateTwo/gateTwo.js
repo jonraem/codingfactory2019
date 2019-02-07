@@ -1,3 +1,3 @@
-export const mirror = () => {
+export const mirror = (string) => {
   // Write code here!
 }
