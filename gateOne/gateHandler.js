@@ -1,3 +1,10 @@
+import needle from 'needle';
+
 export default () => {
-  console.log('Gate One opening...')
+  const url = 'http://192.268.x.x/gate1/open'; // REPLACE THIS WITH ACTUAL URL
+  needle.get(url, (err, res) => {
+    if (err) {
+      console.log(err);
+    }
+  });
 };

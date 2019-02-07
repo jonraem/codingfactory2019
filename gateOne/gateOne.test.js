@@ -2,13 +2,13 @@ import { sum, sumTotal, isBiggerThan } from './gateOne';
 import gateHandler from './gateHandler';
 
 describe('Gate One', () => {
-  
+
   describe('sum', () => {
     it('should return the sum of two values', () => {
       expect(sum(4,3)).toEqual(7);
     });
   });
-  
+
   describe('sumTotal', () => {
     it('should return the sum of all elements in an array', () => {
       expect(sumTotal([1,5,2,0,8])).toEqual(16);
@@ -31,7 +31,7 @@ describe('Gate One', () => {
   const sumTotalPasses = sumTotal([3,5,2,10]) === 20;
   const isBiggerThanPasses = isBiggerThan(5,5) === -1;
   if (sumPasses && sumTotalPasses && isBiggerThanPasses) {
-    console.log('GATE ONE IS OPEN! GOGOGO!');
+    console.log('Gate One opening...');
     gateHandler();
   }
 });

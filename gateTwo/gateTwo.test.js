@@ -12,7 +12,7 @@ describe('Gate Two', () => {
 
   const mirrorPasses = mirror('ASDF') === 'FDSA';
   if (mirrorPasses) {
-    console.log('GATE TWO IS OPEN! GOGOGO!');
+    console.log('Gate Two opening...');
     gateHandler();
   }
 });
