@@ -1,4 +1,4 @@
-import { sum, sumTotal, findBiggest, isBiggerThan } from './gateOne';
+import { sum, sumTotal, isBiggerThan } from './gateOne';
 
 describe('Gate One', () => {
   
@@ -16,13 +16,6 @@ describe('Gate One', () => {
     })
   })
 
-  describe('findBiggest', () => {
-    it('should return the biggest value in given array', () => {
-      expect(findBiggest([1,2,3,4,5])).toEqual(5);
-      expect(findBiggest([8,8,8,8,8])).toEqual(8);
-    })
-  });
-  
   describe('isBiggerThan', () => {
     it('should return 1 if B is bigger than A', () => {
       expect(isBiggerThan(2,1)).toEqual(1);
@@ -38,10 +31,9 @@ describe('Gate One', () => {
   describe('all functions', () => {
     const sumPasses = sum(4,3) === 7;
     const sumTotalPasses = sumTotal([1,5,2,0,8]) === 16;
-    const findBiggestPasses = findBiggest([1,2,3,4,5]) === 5;
     const isBiggerThanPasses = isBiggerThan(4,2) === 1;
 
-    const allFunctionsPass = sumPasses && sumTotalPasses && findBiggestPasses && isBiggerThanPasses;
+    const allFunctionsPass = sumPasses && sumTotalPasses && isBiggerThanPasses;
 
     it('should pass', () => {
       expect(allFunctionsPass).toBeTruthy();
