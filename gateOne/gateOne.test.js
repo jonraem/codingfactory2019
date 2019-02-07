@@ -36,12 +36,20 @@ describe('Gate One', () => {
   });
 
   describe('all functions', () => {
+    const sumPasses = sum(4,3) === 7;
+    const sumTotalPasses = sumTotal([1,5,2,0,8]) === 16;
+    const findBiggestPasses = findBiggest([1,2,3,4,5]) === 5;
+    const isBiggerThanPasses = isBiggerThan(4,2) === 1;
+
+    const allFunctionsPass = sumPasses && sumTotalPasses && findBiggestPasses && isBiggerThanPasses;
+
     it('should pass', () => {
-      expect(sum(4,3)).toEqual(7);
-      expect(sumTotal([1,5,2,0,8])).toEqual(16)
-      expect(findBiggest([1,2,3,4,5])).toEqual(5);
-      expect(isBiggerThan(4,2)).toEqual(1);
+      expect(allFunctionsPass).toBeTruthy();
     });
+
+    if (allFunctionsPass) {
+      // openGate();
+    }
   })
 });
 
