@@ -1,4 +1,4 @@
-import { mirror } from './gateTwo';
+import { mirror, palindrome } from './gateTwo';
 import gateHandler from './gateHandler';
 
 describe('Gate Two', () => {
@@ -10,8 +10,16 @@ describe('Gate Two', () => {
     });
   });
 
+  describe('palindrome', () => {
+    it('should return true if string is a palindrome (receives one argument)', () => {
+      expect(palindrome('Houston')).toEqual(false);
+      expect(palindrome('madam')).toEqual(true);
+    });
+  });
+
   const mirrorPasses = mirror('ASDF') === 'FDSA';
-  if (mirrorPasses) {
+  const palindromePasses = palindrome('saippuakauppias');
+  if (mirrorPasses && palindromePasses) {
     console.log('Gate Two opening...');
     gateHandler();
   }
